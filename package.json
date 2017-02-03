@@ -1,0 +1,23 @@
+{
+  "name": "matlab-array-utils",
+  "version": "1.0.0",
+  "description": "An matlab like array utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calebebrim/ArrayUtilsNJS.git"
+  },
+  "keywords": [
+    "matlab",
+    "array"
+  ],
+  "author": "Calebe Elias Ribeiro Brim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebebrim/ArrayUtilsNJS/issues"
+  },
+  "homepage": "https://github.com/calebebrim/ArrayUtilsNJS"
+}
