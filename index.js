@@ -1,4 +1,11 @@
 
+pcorr = require('compute-pcorr')
+
+/**
+ * return all indexes that matches the provided regular expression
+ * @param {RegExp} regex
+ * @return {Array} indexes
+ */
 String.prototype.indexOfAll = function(regex){
   var regx =  new RegExp(/<[^\/]|(<\/)/g);
   var index = [];
@@ -121,6 +128,26 @@ Array.prototype.transpose = function (force) {
     this.forEach((v,i)=>arr[i][0]=v);
   }
   return arr;
+};
+/***
+ * Return pearson correlation measure between this and the given Array.
+ * For matrixes, the function will return the pearson correlation measure for each line.
+ *
+ */
+Array.prototype.corr = function (vect) {
+  var vi = vect.size(1);
+  var ti = this.size(1);
+
+  if(vi==1){
+    var r = [];
+    for(var i = 0;i<ti;i++){
+      var c = pcorr(this[i],vect);
+      r[i] = c[0][1];
+    }
+    return r;
+  }else {
+    console.log('Given Array Object must have a single dimention and one line.\n  Example: [1 , 3 , 5].\n  [[1],[2],[3]] \\\\<<error')
+  }
 };
 
 

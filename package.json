@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/calebebrim/ArrayUtilsNJS/issues"
   },
-  "homepage": "https://github.com/calebebrim/ArrayUtilsNJS"
+  "homepage": "https://github.com/calebebrim/ArrayUtilsNJS",
+  "dependencies": {
+    "compute-pcorr": "^1.0.0"
+  }
 }
