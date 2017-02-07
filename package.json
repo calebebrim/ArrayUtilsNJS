@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/calebebrim/ArrayUtilsNJS",
   "dependencies": {
-    "compute-pcorr": "^1.0.0"
+    "compute-pcorr": "^1.0.0",
+    "plotter": "^0.5.0"
   }
 }

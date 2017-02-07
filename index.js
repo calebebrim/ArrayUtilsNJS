@@ -35,9 +35,9 @@ Array.prototype['<'] = function (value) {
 };
 
 
+
+
 Array.prototype['*'] = function (value) {
-
-
   if(Array.isArray(value) && this.isConsistent() && value.isConsistent()){
     tvalue = value.transpose();
     // console.log(tvalue.toString())
@@ -149,6 +149,28 @@ Array.prototype.corr = function (vect) {
     console.log('Given Array Object must have a single dimention and one line.\n  Example: [1 , 3 , 5].\n  [[1],[2],[3]] \\\\<<error')
   }
 };
+/***
+* Install instructions:
+* sudo apt-get install gnuplot ghostscript
+*
+* or
+*
+* brew install gnuplot
+* brew install ghostscript
+*/
+
+Array.prototype.plot = function(filename){
+  var szs = this.size();
+  var plot = require('plotter').plot;
+
+  if(szs[0]==1){
+    plot({
+      data:	this,
+      filename:	`${filename}.png`,
+      format:		'png'
+    });
+  }
+}
 
 
 Array.prototype.sum = function () {
