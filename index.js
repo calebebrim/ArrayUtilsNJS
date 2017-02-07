@@ -169,7 +169,21 @@ Array.prototype.plot = function(filename){
       filename:	`${filename}.png`,
       format:		'png'
     });
+  }else{
+    console.log('Not implemented yet.');
   }
+}
+
+Array.prototype.save = function(filename){
+  var fs = require('fs');
+  content = this.toString().replace(/[,|\]\[]/g,'')
+  fs.writeFile(filename, content, function (err){
+      if (err) {
+          console.log(err);
+      } else {
+          console.log("File saved.");
+      }
+  });
 }
 
 
